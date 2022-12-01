@@ -218,6 +218,16 @@ const Login = props => {
 
                     </Form>
                   </div>
+                  <div className="mt-3 d-grid">
+                    <button
+                      onClick={() => props.history.push('/register')}
+                      className="btn login-btn btn-block"
+                      type="submit"
+                    >
+                      Sign Up as a seller
+                    </button>
+                  </div>
+
                 </CardBody>
               </Card>
 

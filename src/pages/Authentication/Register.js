@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import MetaTags from "react-meta-tags";
 import { Row, Col, CardBody, Card, Alert, Container, Input, Label, Form, FormFeedback } from "reactstrap";
+import profile from "assets/images/profile-img.png";
 
 // Formik Validation
 import * as Yup from "yup";
@@ -27,12 +28,12 @@ const Register = props => {
 
     initialValues: {
       email: '',
-      username: '',
+      full_name: '',
       password: '',
     },
     validationSchema: Yup.object({
       email: Yup.string().required("Please Enter Your Email"),
-      username: Yup.string().required("Please Enter Your Username"),
+      full_name: Yup.string().required("Please Enter Your full name"),
       password: Yup.string().required("Please Enter Your Password"),
     }),
     onSubmit: (values) => {
@@ -70,16 +71,16 @@ const Register = props => {
           <Row className="justify-content-center">
             <Col md={8} lg={6} xl={5}>
               <Card className="overflow-hidden">
-                <div className="bg-primary bg-soft">
+              <div className="bg-soft header-color">
                   <Row>
-                    <Col className="col-7">
-                      <div className="text-primary p-4">
-                        <h5 className="text-primary">Free Register</h5>
-                        <p>Get your free Swagplug account now.</p>
+                    <Col xs={7}>
+                      <div style={{ color: "#000" }} className="p-4">
+                        <h5 className="">Welcome</h5>
+                        <p>Sign Up to continue to Online Farm</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
-                      <img src={profileImg} alt="" className="img-fluid" />
+                      <img src={profile} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -138,20 +139,20 @@ const Register = props => {
                       </div>
 
                       <div className="mb-3">
-                        <Label className="form-label">Username</Label>
+                        <Label className="form-label">Full Name</Label>
                         <Input
-                          name="username"
+                          name="full_name"
                           type="text"
-                          placeholder="Enter username"
+                          placeholder="Enter full name"
                           onChange={validation.handleChange}
                           onBlur={validation.handleBlur}
-                          value={validation.values.username || ""}
+                          value={validation.values.full_name || ""}
                           invalid={
-                            validation.touched.username && validation.errors.username ? true : false
+                            validation.touched.full_name && validation.errors.full_name ? true : false
                           }
                         />
-                        {validation.touched.username && validation.errors.username ? (
-                          <FormFeedback type="invalid">{validation.errors.username}</FormFeedback>
+                        {validation.touched.full_name && validation.errors.full_name ? (
+                          <FormFeedback type="invalid">{validation.errors.full_name}</FormFeedback>
                         ) : null}
                       </div>
                       <div className="mb-3">
@@ -201,10 +202,7 @@ const Register = props => {
                     Login
                   </Link>{" "}
                 </p>
-                <p>
-                  © {new Date().getFullYear()} Swagplug. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
-                </p>
+               
               </div>
             </Col>
           </Row>
