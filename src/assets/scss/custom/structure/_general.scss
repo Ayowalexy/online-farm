@@ -1,0 +1,36 @@
+.logo-lg img {
+    width: 57%;
+    height: 100%;
+}
+
+.logo-sm img {
+    width: 57%;
+    height: 100%;
+}
+body[data-sidebar="dark"] #sidebar-menu ul li ul.sub-menu li a {
+    color: #111 !important;
+    background: #d43f56;
+    padding: 8%;
+    margin: 5% 10%;
+    font-size: 1rem;
+}
+body[data-sidebar="dark"] #sidebar-menu ul li a {
+    // color: #111 !important;
+}
+
+body[data-sidebar="dark"] #sidebar-menu ul li ul.sub-menu li a {
+    color: #111;
+    background: #f1f1f1;
+    padding: 8%;
+    margin: 5% 10%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+body[data-sidebar="dark"] .mm-active .active {
+    // color: #111 !important;
+}
+
+body[data-sidebar="dark"] #sidebar-menu ul li a i {
+    // color: #111 !important;
+}
