@@ -1,5 +1,5 @@
 //REGISTER
-export const POST_FAKE_REGISTER = "/post-fake-register";
+export const POST_FAKE_REGISTER = "/api/v1/auth/signup";
 
 //LOGIN
 export const POST_FAKE_LOGIN = "/post-fake-login";
@@ -117,7 +117,9 @@ export const ON_ADD_COMMENT = "/comments-product-add-comment";
 
 //TRUE LOGIN
 // export const POST_LOGIN_USER = '/users/session/admin'
-export const POST_LOGIN_USER = '/auth/login'
+export const POST_LOGIN_USER = '/api/v1/auth/login'
+export const POST_REG_USER = '/auth/signup'
+
 
 
 //DASHBOARD CHART DATA
@@ -125,7 +127,7 @@ export const GET_DASHBOARD_DATA = "/users/getAdminStats"
 
 //GET USERS
 // export const GET_ALL_USERS_ = "/users"
-export const GET_ALL_USERS_ = "/users"
+export const GET_ALL_USERS_ = "/api/v1/users"
 
 export const GET_ONE_USER = "/users/getUser"
 

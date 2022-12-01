@@ -37,6 +37,7 @@ const Register = props => {
       password: Yup.string().required("Please Enter Your Password"),
     }),
     onSubmit: (values) => {
+      console.log('values', values)
       dispatch(registerUser(values));
     }
   });
@@ -59,7 +60,7 @@ const Register = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Register | Swagplug - React Admin & Dashboard Template</title>
+        <title>Register</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">

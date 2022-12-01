@@ -58,6 +58,9 @@ const postFakeProfile = data => post(url.POST_EDIT_PROFILE, data);
 
 const postLoginUser = data => post(url.POST_LOGIN_USER, data);
 
+const postRegUser = data => post(url.POST_FAKE_REGISTER, data);
+
+
 // Register Method
 const postJwtRegister = (url, data) => {
   return axios
@@ -298,6 +301,7 @@ export {
   onAddComment,
 
   //CONNECTED ENDPOINTS
-  postLoginUser
+  postLoginUser,
+  postRegUser
 
 };
